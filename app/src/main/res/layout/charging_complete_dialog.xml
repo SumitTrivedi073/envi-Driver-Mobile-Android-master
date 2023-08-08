@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/fast_charging_button_color"
+        android:orientation="vertical"
+
+
+
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            app:srcCompat="@drawable/ic_lightning"
+
+
+            ></ImageView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dark_theme_grey"
+        android:gravity="center"
+        android:orientation="vertical"
+
+
+        >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/white_text_16sp_charging_station_module"
+        android:text="@string/charge_complete"
+        android:padding="20dp"
+        ></TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/text_with_opacity_charging_station_module"
+            android:text="@string/unplug_charger_from_machine"
+            android:padding="20dp"
+            ></TextView>
+        <TextView
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/timer"
+            style="@style/white_text_16sp_charging_station_module"
+            ></TextView>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/button_css_fast_charging"
+            android:id="@+id/charge_complete_dialog_button"
+            android:text="OK"
+            >
+
+        </Button>
+    </LinearLayout>
+
+</LinearLayout>

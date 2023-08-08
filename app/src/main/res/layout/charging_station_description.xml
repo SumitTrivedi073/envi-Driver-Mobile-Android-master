@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_theme"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="12dp"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_gravity="start"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Malbork Charging Station"
+                android:fontFamily="@font/muli"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                ></TextView>
+            <TextView
+                android:id="@+id/charging_station_address"
+                style="@style/white_text_14sp_charging_station_module"
+                android:text="#14, some , address, exampls"
+                ></TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_gravity="end"
+            >
+
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:numStars="1"
+            android:rating="1"
+            android:layout_gravity="center"
+            android:progressTint="@color/yellow_700"
+
+            />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4.6"
+                android:fontFamily="@font/robotoregular"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                ></TextView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

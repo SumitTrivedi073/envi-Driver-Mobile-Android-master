@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="sgs.env.ecabsdriver.activity.CoolDown"
+    android:orientation="vertical"
+    android:background="@color/dark_theme"
+    android:gravity="center"
+    android:padding="20dp"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/text_with_opacity_charging_station_module"
+        android:text="@string/car_model"
+
+        ></TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/car_model"
+        ></TextView>
+    <include
+        layout="@layout/timer_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+    </include>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cooling_down"
+        android:fontFamily="@font/muli"
+        android:textColor="@color/primarycolor"
+        android:textSize="18sp"
+        android:layout_marginBottom="20dp"
+        >
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/cool_down_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00"
+        android:textColor="@color/fast_charging_button_color"
+        android:textSize="48sp"
+        android:layout_marginBottom="50dp"
+
+        ></TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:background="@color/dark_theme_grey"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_information"
+            >
+
+        </ImageView>
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           style="@style/white_text_14sp_charging_station_module"
+           android:text="@string/cool_down_info"
+           android:textAlignment="center"
+           ></TextView>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

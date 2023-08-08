@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!--  <color name="colorPrimary">#009688</color> -->
+    <color name="colorPrimary">#66c08c</color>
+
+    <color name="colorPrimaryDark">#005b6e</color>
+  <!--<color name="colorAccent">#fac51c</color>-->
+  <color name="colorAccent">#41a85f</color>
+    <color name="white">#ffffff</color>
+    <color name="pin_normal">#6B767E</color>
+    <color name="gray">#CFD8DC</color>
+    <color name="red">#cf0000</color>
+    <color name="textcolor">#1d1d26</color>
+    <color name="text_hint">#9b9b9b</color>
+    <color name="date_coloo">#8c96ab</color>
+    <color name="fab_green">#1B5E20</color>
+    <color name="amber_500">#FF9800</color>
+    <color name="amber_a700">#FF6D00</color>
+  <color name="maplinecolor">#3277d8</color>
+
+  <color name="secondary_black">#444</color>
+
+    <color name="yellow_700">#FFC107</color>
+    <color name="primarytextColor">#555</color>
+    <color name="textColoryash">#aaa</color>
+
+    <color name="buttonClrblack">#555</color>
+    <color name="lightergray">#D3D3D3</color>
+    <color name="grey">#DEDEDE</color>
+    <!-- Screens background color-->
+    <color name="bg_screen2">#20d2bb</color>
+    <!-- dots inactive colors -->
+    <!-- dots active colors -->
+    <color name="primarycolor">#41a85f</color>
+  <color name="actioncolor">#41a85f</color>
+  <color name="btnAction">#41a85f</color>
+  <color name="textcolorpr">#323643</color>
+  <color name="dark_theme">#000000</color>
+  <color name="dark_theme_grey">#303030</color>
+  <color name="fast_charging_button_color">#B6D440</color>
+  <color name="sky_blue">#1FF0F1</color>
+</resources>

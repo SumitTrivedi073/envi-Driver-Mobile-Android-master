@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="sgs.env.ecabsdriver.activity.ChargingStationDetail"
+    android:background="@color/dark_theme"
+    android:orientation="vertical"
+    >
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:src="@drawable/dc_fast_charging"
+        android:layout_weight="1"
+        />
+    <include
+        layout="@layout/charging_station_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        >
+
+    </include>
+    <include
+        layout="@layout/connector_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        >
+
+    </include>
+    <include
+        layout="@layout/charger_allocation_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_margin="12dp"
+        >
+
+    </include>
+    <include
+        android:id="@+id/charging_station_detail_screen_footer"
+        layout="@layout/start_charging_button"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        >
+
+    </include>
+    <include
+        android:visibility="gone"
+        android:id="@+id/otp_verification_for_dc_charging"
+        layout="@layout/otp_verification_for_charging"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        ></include>
+
+    <ProgressBar
+        android:id="@+id/progressBar_on_start_charging"
+        android:visibility="gone"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+
+</LinearLayout>
+</ScrollView>

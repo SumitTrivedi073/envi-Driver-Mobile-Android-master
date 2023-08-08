@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center"
+              android:orientation="horizontal">
+
+    <EditText
+        android:id="@+id/otp_one_edit_text"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:maxLength="1"
+        android:background="@drawable/otp_background"
+        android:maxLines="1"
+        android:layout_margin="4dp"
+        android:textCursorDrawable="@drawable/custom_cursor"
+        android:textColor="@android:color/white"
+        android:nextFocusLeft="@+id/otp_one_edit_text"
+        android:nextFocusRight="@+id/otp_two_edit_text" />
+
+    <EditText
+        android:id="@+id/otp_two_edit_text"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:maxLength="1"
+        android:layout_margin="4dp"
+        android:maxLines="1"
+        android:background="@drawable/otp_background"
+        android:textCursorDrawable="@drawable/custom_cursor"
+        android:nextFocusLeft="@+id/otp_one_edit_text"
+        android:nextFocusRight="@+id/otp_three_edit_text" />
+
+    <EditText
+        android:id="@+id/otp_three_edit_text"
+        android:layout_width="60dp"
+        android:layout_margin="4dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:maxLength="1"
+        android:maxLines="1"
+        android:background="@drawable/otp_background"
+        android:textCursorDrawable="@drawable/custom_cursor"
+        android:nextFocusLeft="@+id/otp_two_edit_text"
+        android:nextFocusRight="@+id/otp_four_edit_text" />
+
+    <EditText
+        android:id="@+id/otp_four_edit_text"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:layout_margin="4dp"
+        android:maxLength="1"
+        android:background="@drawable/otp_background"
+        android:maxLines="1"
+        android:textCursorDrawable="@drawable/custom_cursor"
+        android:nextFocusLeft="@+id/otp_three_edit_text"
+        android:nextFocusRight="@+id/otp_five_edit_text" />
+
+</LinearLayout>

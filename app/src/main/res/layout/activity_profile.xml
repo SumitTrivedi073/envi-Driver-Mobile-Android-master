@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#50cccccc"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+<androidx.appcompat.widget.Toolbar
+    android:layout_width="match_parent"
+    android:id="@+id/toolbarProfileActivity"
+    style="@style/toolbar"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            app:srcCompat="@drawable/back"
+            android:id="@+id/imageViewBack"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/textViewProfileTool"
+            android:text="Profile"
+            android:textSize="18sp"
+            android:paddingRight="50dp"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+</androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/profileimagelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbarProfileActivity"
+        android:layout_margin="4dp"
+        android:elevation="24dp"
+        android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profilepic"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:src = "@drawable/customer"
+            android:layout_margin="8dp"
+            />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonsubmitprofile"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#FFF"
+        android:elevation="8dp"
+        android:layout_below="@+id/profileimagelayout"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/enterprofilename"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginTop="4dp"
+                    android:focusableInTouchMode="true"
+                    android:hint="Name"
+                    android:ellipsize="end"
+                    android:textColor="@color/buttonClrblack"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:text="Mr. Bean"
+                    android:imeOptions="actionNext"
+                    android:keepScreenOn="true"
+                     android:singleLine="true"
+                    android:maxLines="1"
+                    android:textSize="15sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/etEmailId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginTop="4dp"
+                    android:text="7676657538"
+                    android:hint="Mobile Num"
+                    android:textColor="@color/buttonClrblack"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:imeOptions="actionNext"
+
+                    android:textSize="15sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+<!--            <android.support.design.widget.TextInputLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_marginRight="16dp"-->
+<!--                android:layout_marginLeft="16dp"-->
+<!--                android:layout_height="wrap_content">-->
+<!--                <EditText-->
+<!--                    android:id="@+id/etDob"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginBottom="4dp"-->
+<!--                    android:layout_marginTop="4dp"-->
+<!--                    android:text="22/AUG/1980"-->
+<!--                    android:hint="DOB"-->
+<!--                    android:textColor="@color/buttonClrblack"-->
+<!--                    android:cursorVisible="false"-->
+<!--                    android:focusable="false"-->
+<!--                    android:imeOptions="actionNext"-->
+
+<!--                    android:textSize="15sp" />-->
+<!--            </android.support.design.widget.TextInputLayout>-->
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginTop="4dp"
+                    android:focusable="false"
+                    android:hint="Email"
+                    android:cursorVisible="false"
+                    android:text="abc@gmail.com"
+                    android:textColor="@color/buttonClrblack"
+                    android:imeOptions="actionNext"
+                    android:textSize="15sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/enteradressline1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:focusable="false"
+                    android:hint="Address"
+                    android:cursorVisible="false"
+                    android:text="abc@gmail.com"
+                    android:textColor="@color/buttonClrblack"
+                    android:imeOptions="actionNext"
+                    android:inputType="textMultiLine"
+                    android:minLines="3"
+                    android:lines="3"
+                    android:textSize="15sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+    <RatingBar
+    android:layout_width="wrap_content"
+    android:layout_marginRight="16dp"
+    android:layout_marginLeft="16dp"
+    android:isIndicator="true"
+    android:numStars="5"
+    android:id="@+id/profileRating"
+    android:layout_marginTop="8dp"
+    android:layout_height="match_parent"/>
+
+
+
+
+<!--        style="@style/customratebar"     <RatingBar
+                android:id="@+id/rating1"
+                style="@style/customRatingBar"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:rating="5"
+                />
+
+                        <TextView
+                android:layout_width="match_parent"
+                android:id="@+id/tvstarDriver"
+                android:fontFamily="@font/robotoregular"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Highest Rating"
+                android:textSize="18sp"/>-->
+
+            <!--  <android.support.constraint.ConstraintLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="wrap_content"
+                android:layout_margin="0dp"
+                android:visibility="gone"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center"
+                    android:text="Highest Rating"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <RatingBar
+                    android:id="@+id/rating1"
+                    style="@style/customRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:foregroundGravity="center"
+                    android:isIndicator="true"
+                    android:numStars="5"
+                    android:rating="5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView15"/>
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="Overall Rating"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rating1"/>
+
+                <RatingBar
+                    android:id="@+id/rating2"
+                    style="@style/customRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="29dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="4dp"
+                    android:foregroundGravity="center"
+                    android:isIndicator="true"
+                    android:numStars="5"
+                    android:rating="3.5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.497"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView16"
+                    />
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="Lowest Rating"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rating2"/>
+
+                <RatingBar
+                    android:id="@+id/rating3"
+                    style="@style/customRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="29dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:foregroundGravity="center"
+                    android:isIndicator="true"
+                    android:numStars="5"
+                    android:rating="2"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.497"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView17"/>
+
+            </android.support.constraint.ConstraintLayout>-->
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/buttonsubmitprofile"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:background="@android:color/transparent"
+        android:textColor="@android:color/white" />
+
+
+
+
+</RelativeLayout>
+
+

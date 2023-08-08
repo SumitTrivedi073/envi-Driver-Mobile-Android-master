@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="0dp"
+    android:elevation="@dimen/_5sdp"
+    app:cardCornerRadius="@dimen/_2sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_11sdp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@+id/tvStatus"
+                android:fontFamily="@font/karlaregular"
+                android:text="N/A"
+                android:textAllCaps="true"
+                android:textColor="#323643"
+                android:textSize="@dimen/_12sdp" />
+
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/karlaregular"
+                android:text="Canceled"
+                android:textColor="#323643"
+                android:textSize="@dimen/_12sdp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center"
+                android:contentDescription="TODO"
+                app:srcCompat="@drawable/src_point" />
+
+            <TextView
+                android:id="@+id/textViewSource"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_11sdp"
+                android:ellipsize="end"
+                android:fontFamily="@font/karlaregular"
+                android:singleLine="true"
+                android:text="N/A"
+                android:textSize="@dimen/_12sdp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center"
+                android:contentDescription="TODO"
+                app:srcCompat="@drawable/destination_point" />
+
+            <TextView
+                android:id="@+id/textViewDestination"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_11sdp"
+                android:ellipsize="end"
+                android:fontFamily="@font/karlaregular"
+                android:singleLine="true"
+                android:text="N/A"
+                android:textSize="@dimen/_12sdp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:id="@+id/distanceLinear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tvDistance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/karlaregular"
+                    android:text="Distance : N/A"
+                    android:textColor="@color/primarytextColor"
+                    android:textSize="@dimen/_11sdp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/totalFareLinear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/karlaregular"
+                    android:text="Total Fare :"
+                    android:textAllCaps="true"
+                    android:textColor="@color/primarytextColor"
+                    android:textSize="@dimen/_11sdp" />
+
+                <TextView
+                    android:id="@+id/textViewFare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/karlaregular"
+                    android:text="N/A"
+                    android:textColor="@color/secondary_black"
+                    android:textSize="@dimen/_11sdp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:id="@+id/advancePaidLinear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/karlaregular"
+                    android:text="Advance received :"
+                    android:textColor="@color/primarytextColor"
+                    android:textSize="@dimen/_11sdp" />
+
+                <TextView
+                    android:id="@+id/tvAdvancePaid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/karlaregular"
+                    android:text=""
+                    android:textAllCaps="true"
+                    android:textColor="@color/primarytextColor"
+                    android:textSize="@dimen/_11sdp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/amountCollectedLinear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/karlaregular"
+                    android:text="Amount Collected:"
+                    android:textColor="@color/primarytextColor"
+                    android:textSize="@dimen/_11sdp" />
+
+                <TextView
+                    android:id="@+id/amountCollected"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/karlaregular"
+                    android:text="N/A"
+                    android:textColor="@color/secondary_black"
+                    android:textSize="@dimen/_11sdp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:id="@+id/AmountOwnDriverLinear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/karlaregular"
+                    android:text="Amount owned by driver :"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_11sdp" />
+
+                <TextView
+                    android:id="@+id/tvAmountOwnDriver"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/karlaregular"
+                    android:text=""
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_11sdp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/paytmMoneyLinear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/karlaregular"
+                android:text="Payment received threw PayTM :"
+                android:textColor="@color/primarytextColor"
+                android:textSize="@dimen/_11sdp" />
+
+            <TextView
+                android:id="@+id/tvPaytmMoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/karlaregular"
+                android:text=""
+                android:textAllCaps="true"
+                android:textColor="@color/primarytextColor"
+                android:textSize="@dimen/_11sdp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_weight="2"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tvPaymentMode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/karlaregular"
+                    android:text="Payment Mode : N/A"
+                    android:textColor="@color/primarytextColor"
+                    android:textSize="@dimen/_11sdp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/btnCollect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/background_button_shape"
+                    android:fontFamily="@font/karlaregular"
+                    android:gravity="center"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/check_payment_status"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_11sdp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/processing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/karlaregular"
+                    android:text="Processing..."
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_11sdp"
+                    android:visibility="gone" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/paymentStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:fontFamily="@font/karlaregular"
+                    android:text="@string/payment_status"
+                    android:textColor="#2E7D32"
+                    android:textSize="@dimen/_11sdp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/qrImg"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_gravity="center"
+            android:src="@drawable/reload_qr"
+            android:visibility="gone" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/generateQR"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_gravity="center"
+                android:background="@drawable/background_button_shape"
+                android:fontFamily="@font/karlaregular"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:text="@string/generate_qr"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_11sdp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarCash"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primarycolor">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <ImageButton
+                android:id="@+id/buttonBack"
+                android:layout_width="86dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:background="@android:color/transparent"
+                app:srcCompat="@drawable/back" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1"
+                android:text="Total Fare"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/buttonStart"
+        android:layout_below="@+id/toolbarCash">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context="com.sgs.ecabsdriver.activity.CollectCashActivity">
+
+
+            <TextView
+                android:id="@+id/paymentModeMsg"
+                style="@style/collect_cash_screen_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/payment_mode_msg"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/paymentMode_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+            <ImageView
+                android:id="@+id/qr_image"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="@dimen/_150sdp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:src="@drawable/reload_qr" />
+
+            <TextView
+                android:id="@+id/refreshQR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/background_button_shape"
+                android:fontFamily="@font/karlabold"
+                android:padding="@dimen/_10sdp"
+                android:text="Refresh QR"
+                android:visibility="gone"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/qrGenMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/karlabold"
+                android:padding="@dimen/_10sdp"
+                android:gravity="center"
+                android:text="@string/qr_generating_message"
+                android:textColor="@color/colorPrimary" />
+
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/karlabold"
+                android:text="Bill Details"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+
+                    style="@style/collect_cash_screen_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:text="@string/perKmPrice"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewRideFare" />
+
+                <TextView
+                    android:id="@+id/tvperKmPrice"
+                    style="@style/collect_cash_screen_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginRight="24dp"
+                    android:maxLength="7"
+                    android:text="13.8574"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvFare"
+
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textViewTaxes"
+                    style="@style/collect_cash_screen_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:text="@string/distanceTravelled"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewRideFare" />
+
+                <TextView
+                    android:id="@+id/tvDistance"
+                    style="@style/collect_cash_screen_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginRight="24dp"
+                    android:maxLength="7"
+                    android:text="13.8574"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvFare"
+
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/advancePaid_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/advancePaid"
+                    style="@style/collect_cash_screen_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:text="@string/advancepaid"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewRideFare" />
+
+                <TextView
+                    android:id="@+id/advancePaid_txt"
+                    style="@style/collect_cash_screen_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginRight="24dp"
+                    android:maxLength="7"
+                    android:text="00.00"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvFare"
+
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+
+                >
+
+                <TextView
+                    android:id="@+id/textViewRideFare"
+                    style="@style/collect_cash_screen_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:text="Base Fare "
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+
+                <TextView
+                    android:id="@+id/tvFare"
+                    style="@style/collect_cash_screen_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginRight="16dp"
+                    android:maxLength="7"
+                    android:text="182.677"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/GSTprice"
+                    style="@style/collect_cash_screen_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:text="GST"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+
+                <TextView
+                    android:id="@+id/GstPriceTxt"
+                    style="@style/collect_cash_screen_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginRight="16dp"
+                    android:maxLength="7"
+                    android:text="182.677"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/DiscountView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/Discountprice"
+                    style="@style/collect_cash_screen_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:text="Discount"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+
+                <TextView
+                    android:id="@+id/DiscountpriceTxt"
+                    style="@style/collect_cash_screen_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginRight="16dp"
+                    android:maxLength="7"
+                    android:text="182.677"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/tollCharges_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textViewTaxes"
+                    style="@style/collect_cash_screen_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:text="@string/toll_charges"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewRideFare" />
+
+                <TextView
+                    android:id="@+id/tvTollAmount"
+                    style="@style/collect_cash_screen_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginRight="24dp"
+                    android:maxLength="7"
+                    android:text="00.00"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvFare"
+
+                    />
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="14dp"
+                android:layout_marginLeft="14dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/textColoryash"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDuration" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="14dp"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/textColoryash"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTotalFare" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textViewTotalPayable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/karlabold"
+                    android:text="Total Bill Payable"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_14sdp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tollCharges_view" />
+
+                <TextView
+                    android:id="@+id/tvTotalFare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginRight="24dp"
+                    android:fontFamily="@font/karlabold"
+                    android:maxLength="9"
+                    android:text="₹ 195.000"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_14sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tollCharges_view" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/textViewPaymentMode"
+                style="@style/collect_cash_screen_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/karlabold"
+                android:padding="2dp"
+                android:text="Payment mode"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view2" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:orientation="horizontal"
+                android:padding="4dp"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/paymentMode_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </ImageView>
+
+                    <TextView
+                        android:id="@+id/paymentMode_value"
+                        style="@style/collect_cash_screen_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:fontFamily="@font/karlabold"
+                        android:textColor="@android:color/black"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewPaymentMode" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/collect_payment_info"
+                style="@style/collect_cash_screen_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingTop="20dp"
+                android:text="@string/confirm_if_payment_is_done"
+                android:visibility="gone">
+
+            </TextView>
+
+            <LinearLayout
+                android:id="@+id/toll_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@id/buttonCollect"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/paymentMode_value">
+
+                <CheckBox
+                    android:id="@+id/toll_checkBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/apply_toll"
+                    android:fontFamily="@font/karlaregular">
+
+                </CheckBox>
+                <LinearLayout
+                    android:id="@+id/toll_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:weightSum="2">
+
+                    <EditText
+                        android:id="@+id/toll_amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_edit"
+                        android:fontFamily="@font/karlaregular"
+                        android:gravity="center"
+                        android:hint="@string/enter_toll_amount"
+                        android:inputType="numberSigned"
+                        android:maxLength="10"
+                        android:maxLines="1"
+                        android:padding="@dimen/_5sdp"
+                        android:singleLine="true"
+                        android:textSize="@dimen/_12sdp">
+
+                    </EditText>
+
+                    <Button
+                        android:id="@+id/tollSubmit"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/background_button_shape"
+                        android:fontFamily="@font/karlaregular"
+                        android:text="@string/add_toll_charges"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12sdp">
+
+                    </Button>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/buttonCollect"
+                style="@style/action_button"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@drawable/background_button_shape"
+                android:text="CONFIRM"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/toll_layout" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/toll_layout">
+
+                <TextView
+                    android:id="@+id/checkTansactionStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:background="@drawable/background_button_shape"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Check transaction status"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,12 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="dialog_height">300dp</dimen>
+    <dimen name="otp_dialog_width">600dp</dimen>
+    <dimen name="otp_dialog_height">500dp</dimen>
+    <dimen name="slide_title">30dp</dimen>
+    <dimen name="slide_desc">16dp</dimen>
+    <dimen name="desc_padding">40dp</dimen>
+    <dimen name="sixteen_sp">16sp</dimen>
+    <dimen name="eighteen_sp">18sp</dimen>
+</resources>

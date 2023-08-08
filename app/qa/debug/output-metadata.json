@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "in.malbork.envi.app.driver.qa",
+  "variantName": "qaDebug",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "properties": [],
+      "versionCode": 87,
+      "versionName": "2.3.0",
+      "enabled": true,
+      "outputFile": "DriverEnvi 26-12-2022.apk"
+    }
+  ]
+}

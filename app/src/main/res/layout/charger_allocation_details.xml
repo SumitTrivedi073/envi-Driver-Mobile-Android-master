@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/dark_theme"
+    android:backgroundTint="@color/dark_theme_grey"
+    android:padding="12dp"
+
+    >
+    <TextView
+
+        android:text="@string/charger_allocation_details"
+        style="@style/white_text_14sp_charging_station_module"
+        android:layout_marginBottom="10dp"
+        >
+
+
+    </TextView>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            app:srcCompat="@drawable/ic_charger_icon"></ImageView>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <TextView
+
+                android:text="@string/charger"
+                style="@style/text_with_opacity_charging_station_module"
+                >
+
+
+            </TextView>
+            <TextView
+                android:id="@+id/charger_id"
+                style="@style/white_text_14sp_charging_station_module"
+                android:text="BHARAT dc 02"
+                android:layout_marginBottom="10dp"
+
+                ></TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/ic_electric_charge_big"
+            android:layout_marginRight="5dp"
+            >
+
+        </ImageView>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <TextView
+                style="@style/text_with_opacity_charging_station_module"
+                android:text="@string/gun"
+
+                ></TextView>
+            <TextView
+                style="@style/white_text_14sp_charging_station_module"
+                android:id="@+id/connectorId_in_connector_allocation"
+                android:text="A(Left)"
+                ></TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.LoginActivity">
+
+        <ImageView
+            android:id="@+id/backgroundImage"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/phoneicon"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@color/primarycolor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+             />
+
+        <ImageView
+            android:id="@+id/phoneicon"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/info_background"
+            android:padding="5dp"
+            android:rotation="30"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.29000002"
+            app:srcCompat="@drawable/smartphone_24dp"
+           />
+
+        <TextView
+            android:id="@+id/titleverifymobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/verify"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toTopOf="@+id/phoneicon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+<!--        <TextView-->
+<!--            android:id="@+id/tvtitlemobile"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginEnd="8dp"-->
+<!--            android:layout_marginStart="8dp"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:text="Please enter your Mobile num"-->
+<!--            android:textColor="@color/white"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/titleverifymobile" />-->
+
+        <EditText
+            android:id="@+id/etcountryname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#c5c5c5"
+            android:paddingBottom="10dp"
+            android:maxLength="15"
+            android:inputType="none"
+            android:cursorVisible="false"
+           android:text="india"
+            android:textColor="#757575"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phoneicon" />
+
+
+        <EditText
+            android:id="@+id/tv_country_code"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:gravity="start"
+            android:lines="1"
+            android:maxLength="5"
+            android:inputType="phone"
+            android:paddingBottom="10dp"
+            android:text="+91"
+            android:cursorVisible="false"
+            android:textColor="#757575"
+            android:textSize="20sp"
+            android:editable="false"
+            android:enabled="false"
+            android:clickable="false"
+            android:backgroundTint="#c5c5c5"
+            app:layout_constraintBaseline_creator="1"
+            app:layout_constraintBaseline_toBaselineOf="@+id/et_phone_number"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.3"
+            />
+
+        <EditText
+            android:id="@+id/et_phone_number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:hint="Phone Number"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:maxLines="1"
+            android:gravity="top"
+            android:paddingBottom="10dp"
+            android:text=""
+            android:textColor="#005b6e"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/etcountryname"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="16dp"/>
+
+        <Button
+            android:id="@+id/btnsendotp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/btnAction"
+            android:text="LOGIN"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_phone_number"
+            app:layout_constraintVertical_bias="0.11" />
+
+        <TextView
+            android:id="@+id/tvtitleeula"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/terms"
+            android:textAlignment="center"
+            android:textColor="#9b9b9b"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnsendotp"
+            app:layout_constraintVertical_bias="0.034" />
+
+        <include
+            android:id="@+id/otpView"
+            layout="@layout/otp_layout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/progressotp"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tvtextPowered"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/poweredBy"
+            android:textAlignment="center"
+            android:textColor="#9b9b9b"
+            android:textSize="10sp"
+
+            app:layout_constraintBottom_toTopOf="@+id/malborkLogo"
+            app:layout_constraintTop_toTopOf="@+id/malborkLogo"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <ImageView
+            android:id="@+id/malborkLogo"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvtextPowered"
+            app:layout_constraintVertical_bias="0.937"
+            app:srcCompat="@drawable/malbork" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="80dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/ic_launcher_round"
+            app:layout_constraintBottom_toTopOf="@+id/titleverifymobile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

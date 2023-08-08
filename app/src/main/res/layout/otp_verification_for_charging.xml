@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_theme"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/otp_verification_title"
+        android:textColor="@color/primarycolor"
+        android:textSize="14sp"
+        android:fontFamily="@font/muli"
+        android:layout_marginBottom="10dp"
+        ></TextView>
+    <TextView
+        style="@style/white_text_14sp_charging_station_module"
+        android:text="@string/enter_otp_charging_station"
+
+
+        >
+
+    </TextView>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+    <TextView
+        style="@style/text_with_opacity_charging_station_module"
+        android:text="@string/not_get_otp"
+        ></TextView>
+        <TextView
+            style="@style/text_with_opacity_charging_station_module"
+            android:id="@+id/resend_otp_for_charging"
+            android:text="@string/resend_otp_for_charging"
+            android:textColor="@color/primarycolor"
+            android:fontFamily="@font/muli_bold"
+            ></TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        >
+        <EditText
+            style="@style/otp_text_style_charging_station"
+            android:maxLength="1"
+            android:id="@+id/otp_field_one"
+            android:nextFocusForward="@id/otp_field_two"
+            android:inputType="number"
+            android:imeOptions="actionNext"
+            >
+
+        </EditText>
+        <EditText
+            style="@style/otp_text_style_charging_station"
+            android:maxLength="1"
+            android:id="@+id/otp_field_two"
+            android:nextFocusForward="@id/otp_field_three"
+            android:inputType="number"
+            android:imeOptions="actionNext"
+            >
+
+        </EditText>
+        <EditText
+            style="@style/otp_text_style_charging_station"
+            android:maxLength="1"
+            android:id="@+id/otp_field_three"
+            android:nextFocusForward="@id/otp_field_four"
+            android:inputType="number"
+            android:imeOptions="actionNext"
+            >
+
+        </EditText>
+        <EditText
+            style="@style/otp_text_style_charging_station"
+            android:maxLength="1"
+            android:id="@+id/otp_field_four"
+            android:nextFocusForward="@id/otp_field_five"
+            android:inputType="number"
+            android:imeOptions="actionNext"
+            >
+
+        </EditText>
+        <EditText
+            style="@style/otp_text_style_charging_station"
+            android:maxLength="1"
+            android:id="@+id/otp_field_five"
+            android:inputType="number"
+            android:imeOptions="actionNext"
+            >
+
+        </EditText>
+
+        
+    </LinearLayout>
+    <Button
+        style="@style/button_css_fast_charging"
+        android:text="@string/verify_and_proceed"
+        android:id="@+id/verify_otp_and_proceed"
+        ></Button>
+    <ProgressBar
+        android:id="@+id/progress_bar_on_otp_verification_for_charging"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        ></ProgressBar>
+
+</LinearLayout>

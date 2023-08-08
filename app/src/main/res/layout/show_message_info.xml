@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/popup_relative">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/muli_bold"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/received_new_message"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_14sdp" />
+
+        <RelativeLayout
+            android:id="@+id/cancle_relative"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_alignParentEnd="true">
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_baseline_close_24"
+                app:tint="@android:color/black" />
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@color/gray"/>
+
+        <TextView
+            android:id="@+id/messagetxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/muli_bold"
+            android:gravity="center"
+            android:padding="@dimen/_10sdp"
+            android:text="@string/received_new_message"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_12sdp" />
+
+         <EditText
+             android:id="@+id/responseExt"
+             android:layout_width="match_parent"
+             android:layout_height="@dimen/_100sdp"
+             android:background="@drawable/popup_relative"
+             android:layout_margin="@dimen/_10sdp"
+             android:hint="write something here"
+             android:textSize="@dimen/_12sdp"
+             android:gravity="top"
+             android:padding="@dimen/_10sdp"
+             android:textColor="@android:color/black"
+             android:fontFamily="@font/karlaregular"
+             android:maxLength="100"
+             android:visibility="gone"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="@dimen/_10sdp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:id="@+id/playBtnLinear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/playBtn"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/_5sdp"
+                    android:background="@drawable/background_button_shape"
+                    android:fontFamily="@font/muli_bold"
+                    android:gravity="center"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/okbtn"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/_5sdp"
+                    android:background="@drawable/background_button_shape"
+                    android:fontFamily="@font/muli_bold"
+                    android:gravity="center"
+                    android:text="@string/ok"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

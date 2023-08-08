@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.TripMapActivity" />
+
+    <ImageView
+        android:id="@+id/ivMarker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/source"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/progressBarCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/customerDetails"
+        layout="@layout/new_custmer_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:visibility="invisible" />
+
+    <include
+        android:id="@+id/watitingTime"
+        layout="@layout/timeexpired"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="0dp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutIntial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/stopBtn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            style="@style/action_button"
+            android:layout_margin="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:text="End Trip"
+            android:textAllCaps="true"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSource"
+        style="@style/action_button"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:padding="8dp"
+        android:text="Arrived AT source"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/btnDestination"
+        style="@style/action_button"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:padding="8dp"
+        android:text="Arrived AT Destination"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvCountDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/karlaregular"
+        android:gravity="center"
+        android:textColor="@color/red"
+        android:textSize="@dimen/_14sdp"
+        android:visibility="visible"
+        android:layout_below="@+id/sos"
+        />
+
+    <Button
+        android:id="@+id/sos"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="@dimen/_8sdp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/so_s"
+        android:fontFamily="@font/karlaregular"
+        android:text="SOS"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_20sdp"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignTop="@+id/map"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+
+    <Button
+        android:id="@+id/goToCustomerDestination"
+        style="@style/action_button"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/goToCustomerPickUp"
+        android:layout_alignParentEnd="true"
+
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:padding="@dimen/_8sdp"
+        android:text="Route to Customer Destination"
+        android:textColor="@color/white"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/goToCustomerPickUp"
+        style="@style/action_button"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnSource"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:padding="@dimen/_8sdp"
+        android:text="Route to Customer Pick Up"
+        android:textColor="@color/white"
+        android:visibility="visible" />
+
+
+</RelativeLayout>

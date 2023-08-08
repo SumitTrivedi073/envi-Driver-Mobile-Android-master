@@ -1,0 +1,89 @@
+<resources>
+    <string name="app_name">Envi Driver</string>
+    <string name="pick_up">Pick Up</string>
+    <string name="verify">Sign In</string>
+    <string name="terms"><![CDATA[By continuing here, you accept our terms & conditions as per EULA (End User License Agreement)]]></string>
+    <string name="poweredBy">Brought to you by</string>
+    <string name="resend"><u>Resend !</u></string>
+    <!--\n Pick your favorite from a wide range of cars-->
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <!-- Example settings for Data & Sync -->
+    <!-- Example settings for Notifications -->
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+    <string name="user_guide">User Guide</string>
+    <string name="title_activity_testing_maps">Map</string>
+    <string name="charger_allocation_details">Charger allocation Details</string>
+    <string name="charger">CHARGER</string>
+    <string name="gun">GUN</string>
+    <string name="start_charging">START CHARGING</string>
+    <string name="otp_verification_title">OTP Verification</string>
+    <string name="enter_otp_charging_station">Enter the OTP sent</string>
+    <string name="power_level">Power level</string>
+    <string name="verify_and_proceed">VERIFY AND PROCEED</string>
+    <string name="otp_sent_successfully">OTP sent successfully. Please check your notification</string>
+    <string name="try_again">Please try again</string>
+    <string name="battery_low">Battery low. Time to charge the car</string>
+    <string name="way_to_station">WAY TO STATION</string>
+    <string name="no_nearby_charging_station">No nearby charging station</string>
+    <string name="resend_otp_for_charging">RESEND</string>
+    <string name="not_get_otp">Didn\'t get OTP?</string>
+    <string name="charge_complete">Charge Completed</string>
+    <string name="unplug_charger_from_machine">Please unplug the charger from the machine</string>
+    <string name="car_model">Car Model</string>
+    <string name="cooling_down">Cooling down</string>
+    <string name="cool_down_info">Please wait for the battery to cool down before starting the car</string>
+    <string name="connected_to">Connected to</string>
+    <string name="charging">Charging</string>
+    <string name="payment_mode_msg">Customer is paying through \u0020</string>
+    <string name="confirm_if_payment_is_done">Please confirm if payment is received</string>
+    <string name="collect_cash">Please collect cash</string>
+    <string name="confirm">CONFIRM</string>
+    <string name="ok">OK</string>
+    <string name="successful_online_payment">Online payment done</string>
+    <string name="successful_qr_payment">QR payment done</string>
+    <string name="online_payment_confirmation_wait">Waiting for online payment confirmation</string>
+    <string name="payment_status">PAYMENT STATUS</string>
+    <string name="apply_toll">Apply toll charges</string>
+    <string name="add_toll_charges">Apply Toll Amount</string>
+    <string name="toll_charges">Toll Charges</string>
+    <string name="requesting_ride">RIDE REQUEST</string>
+    <string name="ride_request_for">You received a new request from</string>
+    <string name="estimated_fare">Estimate Fare</string>
+    <string name="trip_details">Trip Details</string>
+    <string name="enter_toll_amount">Please enter toll</string>
+    <string name="received_new_message">Received New Message</string>
+    <string name="broadcast_message">Broadcast Message</string>
+    <string name="click_Refresh_QR">Please click on Refresh QR before doing QR code payment</string>
+    <string name="toll__not_added">Toll could not added to the total fare Please try again</string>
+    <string name="confirmed">Confirmed</string>
+    <string name="retry">Try Again!</string>
+    <string name="generate_qr">Generate QR</string>
+    <string name="check_payment_status">Check payment status</string>
+    <string name="regenrate_qr_message">If you want to regenrate please wait \nfor one minute</string>
+    <string name="qr_generating_message">QR code genration is in process please wait…</string>
+    <string name="qr_regenerate_txt">QR code is already generated do you want to regenerate it?</string>
+    <string name="choose">Choose</string>
+    <string name="upload">Upload</string>
+    <string name="send">Send</string>
+    <string name="cancel">Cancel</string>
+    <string name="select_video">Select Video</string>
+    <string name="select_image">Select Image</string>
+    <string name="no_internet">No internet connection!</string>
+    <string name="received_image_from_admin">You Received an Image From Admin</string>
+    <string name="received_audio_from_admin">You Received an Audio file From Admin</string>
+    <string name="received_video_from_admin">You Received an Video clip From Admin</string>
+    <string name="tripAutoCancel">Trip automatic cancel in</string>
+    <string name="pickupCustomerAt">Pickup customer at:-</string>
+    <string name="viewImage">View Image</string>
+    <string name="playAudio">Play Audio Image</string>
+    <string name="playVideo">Play Video Image</string>
+    <string name="advancepaid">Advance Paid</string>
+    <string name="perKmPrice">fare/KM</string>
+    <string name="distanceTravelled">Distance (KM)</string>
+    <string name="envi_app_updation">Latest Envi Driver App are available please update first and enjoy </string>
+
+</resources>

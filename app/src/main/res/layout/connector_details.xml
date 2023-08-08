@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_theme"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_gravity="start"
+
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_electric_charge"
+                android:layout_marginRight="5dp"
+                ></ImageView>
+
+            <TextView
+
+                android:text="@string/gun"
+                style="@style/text_with_opacity_charging_station_module"
+
+                >
+
+
+            </TextView>
+        </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4"
+                android:id="@+id/connectorId"
+                android:textColor="@color/white"
+                >
+
+            </TextView>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_gravity="end"
+        android:textAlignment="textEnd"
+        >
+        <TextView
+            style="@style/text_with_opacity_charging_station_module"
+            android:id="@+id/connector_power_level"
+            android:text="@string/power_level"
+            android:textAlignment="textEnd"
+            android:layout_gravity="end"
+            ></TextView>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_power"
+                android:layout_marginRight="5dp"
+                ></ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="30Kwh"
+                android:textColor="@color/white"
+                android:textAlignment="textEnd"
+                android:layout_gravity="end"
+                >
+
+            </TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>

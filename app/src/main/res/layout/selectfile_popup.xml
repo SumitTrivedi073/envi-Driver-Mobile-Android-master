@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/popup_relative">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="@dimen/_14sdp"
+            android:text="@string/app_name"
+            android:fontFamily="@font/karlabold"
+            android:layout_margin="@dimen/_10sdp"
+            android:textColor="@color/secondary_black"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/selectImage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            app:cardUseCompatPadding="true"
+            app:cardCornerRadius="@dimen/_10sdp"
+            android:elevation="@dimen/_2sdp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="@dimen/_13sdp"
+                android:text="@string/select_image"
+                android:fontFamily="@font/karlaregular"
+                android:textColor="@color/secondary_black"/>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/selectVideo"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            app:cardUseCompatPadding="true"
+            app:cardCornerRadius="@dimen/_10sdp"
+            android:elevation="@dimen/_2sdp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="@dimen/_13sdp"
+                android:text="@string/select_video"
+                android:fontFamily="@font/karlaregular"
+                android:textColor="@color/secondary_black"/>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cancelBtn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            app:cardUseCompatPadding="true"
+            app:cardCornerRadius="@dimen/_10sdp"
+            android:elevation="@dimen/_2sdp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="@dimen/_13sdp"
+                android:text="@string/cancel"
+                android:fontFamily="@font/karlaregular"
+                android:textColor="@color/secondary_black"/>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MapActivity">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linearLayoutIntial">
+
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/googlemap"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <include
+            android:id="@+id/customerDetails"
+            layout="@layout/new_custmer_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_10sdp" />
+
+        <Button
+            android:id="@+id/goToMapsWithCutomerPickUpLocation"
+            style="@style/action_button"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_margin="@dimen/_10sdp"
+            android:padding="@dimen/_5sdp"
+            android:text="Route to Customer Pick Up Location"
+            android:textColor="@color/white"
+            android:visibility="visible"
+
+            />
+
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutIntial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/btnCustomer"
+            style="@style/action_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:text="Customer "
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/buttonStop"
+            style="@style/action_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:text="stop"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/buttonStart"
+            style="@style/action_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginBottom="2dp"
+            android:layout_weight="1"
+            android:background="@color/btnAction"
+            android:text="Start"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/buttoncancel"
+            style="@style/action_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:text="cancel"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/sos"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="@drawable/so_s"
+        android:fontFamily="@font/karlaregular"
+        android:text="SOS"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_20sdp"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLayoutIntial"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="190dp"
+        android:layout_marginRight="190dp"
+        android:layout_marginBottom="358dp"
+        android:visibility="gone" />
+
+
+</RelativeLayout>
